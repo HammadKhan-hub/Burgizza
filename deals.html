@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgizza | Exclusive Deals & Offers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Playfair+Display:wght@700;800&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for Deals page */
+        .deals-hero {
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1607013251379-e6eecfffe234?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 80px;
+        }
+        .deals-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .deals-hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        .deals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+        .deal-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid rgba(47, 27, 20, 0.08);
+        }
+        .deal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .deal-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            z-index: 2;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .deal-img {
+            height: 240px;
+            overflow: hidden;
+        }
+        .deal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .deal-card:hover .deal-img img {
+            transform: scale(1.05);
+        }
+        .deal-content {
+            padding: 30px;
+        }
+        .deal-content h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        .deal-content p {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .deal-price {
+            font-size: 1.6rem;
+            color: var(--secondary);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+        .deal-btn {
+            display: inline-block;
+            margin-top: 15px;
+        }
+        @media (max-width: 768px) {
+            .deals-hero h1 {
+                font-size: 2.8rem;
+            }
+            .deals-hero p {
+                font-size: 1.1rem;
+            }
+            .deal-img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (copied from index.html) -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://images.unsplash.com/photo-1563834868519-5c0c47e8a1f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Burgizza Logo">
+                <span>BURGIZZA</span>
+            </a>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#features">Experience</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html#testimonials">Reviews</a></li>
+                    <li><a href="index.html#contact">Visit Us</a></li>
+                    <li><a href="deals.html" class="active">Deals</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="deals-hero">
+        <div class="container">
+            <h1>Exclusive Deals & Offers</h1>
+            <p>Limited-time combos, seasonal discounts, and gourmet bundles crafted for true connoisseurs.</p>
+        </div>
+    </section>
+
+    <!-- Deals Section -->
+    <section class="deals-section">
+        <div class="container">
+            <div class="section-title" style="margin-bottom: 50px;">
+                <h2>Premium Combos</h2>
+                <p>Handcrafted value bundles just for you</p>
+            </div>
+            <div class="deals-grid">
+                <!-- Deal 1 -->
+                <div class="deal-card animate-on-scroll">
+                    <div class="deal-badge">20% OFF</div>
+                    <div class="deal-img">
+                        <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?auto=format&fit=crop&w=600&q=80" alt="Truffle Night Duo">
+                    </div>
+                    <div class="deal-content">
+                        <h3>Truffle Night Duo</h3>
+                        <p>Truffle Beef Burger + Black Truffle Fries + Craft Soda</p>
+                        <div>
+                            <span class="deal-price">₨2,999</span>
+                            <span class="original-price">₨3,748</span>
+                        </div>
+                        <a href="https://wa.me/923001234567?text=Hi,%20I'd%20like%20to%20order%20the%20Truffle%20Night%20Duo!" class="btn deal-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Deal 2 -->
+                <div class="deal-card animate-on-scroll">
+                    <div class="deal-badge">SAVE ₨800</div>
+                    <div class="deal-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1661762555601-47d088a26b50?auto=format&fit=crop&w=600&q=80" alt="Wood-Fired Feast">
+                    </div>
+                    <div class="deal-content">
+                        <h3>Wood-Fired Feast</h3>
+                        <p>Truffle Margherita + Wild Mushroom Pizza + Arugula Salad</p>
+                        <div>
+                            <span class="deal-price">₨4,499</span>
+                            <span class="original-price">₨5,598</span>
+                        </div>
+                        <a href="https://wa.me/923001234567?text=Hi,%20I'd%20like%20to%20order%20the%20Wood-Fired%20Feast!" class="btn deal-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Deal 3 -->
+                <div class="deal-card animate-on-scroll">
+                    <div class="deal-badge">NEW</div>
+                    <div class="deal-img">
+                        <img src="https://images.unsplash.com/photo-1704007573697-6a516da421ec?auto=format&fit=crop&w=600&q=80" alt="Lobster Luxe Combo">
+                    </div>
+                    <div class="deal-content">
+                        <h3>Lobster Luxe Combo</h3>
+                        <p>Lobster Burger + Wagyu Tartare + Sparkling Lemonade</p>
+                        <div>
+                            <span class="deal-price">₨4,299</span>
+                            <span class="original-price">₨5,198</span>
+                        </div>
+                        <a href="https://wa.me/923001234567?text=Hi,%20I'd%20like%20to%20order%20the%20Lobster%20Luxe%20Combo!" class="btn deal-btn">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>BURGIZZA</h3>
+                    <p>Exquisite Burger's & Pizza's - Culinary artistry in every bite.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#features">Experience</a></li>
+                        <li><a href="index.html#menu">Menu</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                        <li><a href="index.html#contact">Visit Us</a></li>
+                        <li><a href="deals.html">Deals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <ul class="footer-links">
+                        <li>Monday - Thursday: 5pm - 10pm</li>
+                        <li>Friday - Saturday: 5pm - 11pm</li>
+                        <li>Sunday: 5pm - 9pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 BURGIZZA Premium Burger's & Pizza's. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Reuse mobile menu & scroll logic -->
+    <script>
+        // Mobile toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const nav = document.querySelector('nav');
+        mobileToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileToggle.innerHTML = nav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Scroll animation
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
