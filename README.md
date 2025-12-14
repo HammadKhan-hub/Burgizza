@@ -67,8 +67,8 @@ The form in the template is primarily for design and does not contain server-sid
 3.  In your `index.html` file, find the `<form>` tag and paste the URL into the `action` attribute:
 
 ```html
-<form action="[PASTE YOUR FORMSPREE ENDPOINT URL HERE]" method="POST">
+<form action="https://formspree.io/f/mwpgzrlz" method="POST">
     </form>
 
 🤝 Support and Contact
-If you require assistance with setting up the template or fixing any issues, please contact the developer at this email address: [hk5718721@gmail.com]
+If you require assistance with setting up the template or fixing any issues, please contact the developer at this email address: hk5718721@gmail.com
